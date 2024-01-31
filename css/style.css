@@ -29,7 +29,7 @@ font-family: "Poppins" , sans-serif;
 
 body{
     min-height: 100vh;
-    background-color: var(--primary-color);
+    /* background-color: var(--primary-color); */
 }
 
 body.dark{

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--<title>Registration Form in HTML CSS</title>-->
+    <!---Custom CSS File--->
+    <link rel="stylesheet" href="css/add-student.css" />
+</head>
+
+<body>
+    
+    <section class="container">
+        <header>Update Student Details</header>
+        <form action="#" class="form">
+            <div class="personal-details">
+                <h3>Personal Details</h3>
+                <div class="input-box">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Enter full name" id="fullName" />
+                </div>
+
+                <div class="input-box">
+                    <label>Email Address</label>
+                    <input type="text" placeholder="Enter email address" id="email" readonly  />
+                </div>
+
+                <div class="column">
+                    <div class="input-box">
+                        <label>Phone Number</label>
+                        <input type="number" placeholder="Enter phone number" id="mobileNo" readonly />
+                    </div>
+                    <div class="input-box">
+                        <label>Birth Date</label>
+                        <input type="date" placeholder="Enter birth date" id="dob" readonly />
+                    </div>
+                </div>
+
+                <div class="gender-box">
+                    <h3>Gender</h3>
+                    <div class="gender-option">
+                        <div class="">
+                            <input type="radio" id="check-male" name="gender" value="Male" checked />
+                            <label for="check-male">male</label>
+                        </div>
+                        <div class="">
+                            <input type="radio" id="check-female" name="gender" value="Female"  />
+                            <label for="check-female">Female</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-box address">
+                    <label>Address</label>
+                    <input type="text" placeholder="Enter street address" id="street1"  />
+                    <input type="text" placeholder="Enter street address line 2" id="street2"  />
+                    <div class="column">
+                        <div class="select-box">
+                            <select id="country">
+                                <option hidden>Country</option>
+                                <option>America</option>
+                                <option>Japan</option>
+                                <option>India</option>
+                                <option>Nepal</option>
+                            </select>
+                        </div>
+                        <input type="text" placeholder="Enter your city" id="city"  />
+                    </div>
+                    <div class="column">
+                        <input type="text" placeholder="Enter your region" id="region"  />
+                        <input type="number" placeholder="Enter postal code" id="postalCode"  />
+                    </div>
+                </div>
+            </div>
+
+            <div class="family-details">
+                <h3>Family Details</h3>
+                <div class="column">
+                    <div class="input-box">
+                        <label>Father's Name</label>
+                        <input type="text" placeholder="Enter your father's name" id="fatherName" readonly />
+                    </div>
+                    <div class="input-box">
+                        <label>Father's Number</label>
+                        <input type="number" placeholder="Enter your father's number" id="fatherNumber"  />
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label>Father's Occupation</label>
+                    <input type="text" placeholder="Enter father's occupation" id="fatherOccupation" />
+                </div>
+
+                <div class="column">
+                    <div class="input-box">
+                        <label>Mother's Name</label>
+                        <input type="text" placeholder="Enter your mother's name" id="motherName" />
+                    </div>
+                    <div class="input-box">
+                        <label>Mother's Occupation</label>
+                        <input type="text" placeholder="Enter your mother's occupation" id="motherOccupation"  />
+                    </div>
+                </div>
+            </div>
+
+            <div class="educational-details">
+                <h3>Educational Details</h3>
+                <div class="column">
+                    <div class="input-box">
+                        <label>High School %</label>
+                        <input type="text" placeholder="Enter high school percentage" id="highSchool"  />
+                    </div>
+
+                    <div class="input-box">
+                        <label>High School Marksheet</label>
+                        <input type="file" placeholder="Enter high school marksheet" id="highSchoolCertificate"  />
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="input-box">
+                        <label>Intermediate Exam %</label>
+                        <input type="text" placeholder="Enter intermediate exam percentage" id="intermediateExam"  />
+                    </div>
+
+                    <div class="input-box">
+                        <label>Intermediate Exam Marksheet</label>
+                        <input type="file" placeholder="Enter intermediate exam marksheet" id="intermediateExamCertificate" />
+                    </div>
+                </div>
+            </div>
+
+            <button>Submit</button>
+        </form>
+    </section>
+    <script>
+        // window.location.reload();
+        var formData = JSON.parse(window.localStorage.getItem("formData"));
+        console.log(formData);
+        document.getElementById('fullName').value = formData[0].fullName;
+        document.getElementById('email').value = formData[0].email;
+        document.getElementById('mobileNo').value = formData[0].mobileNo;
+        document.getElementById('dob').value = formData[0].dob;
+        const gender = formData[0].gender;
+        if(gender == "Male"){
+        document.getElementById('check-male').checked = true;
+        }else{
+        document.getElementById('check-female').checked = true;
+
+        }
+        document.getElementById('street1').value = formData[0].street1;
+        document.getElementById('street2').value = formData[0].street2;
+        document.getElementById('country').value = formData[0].country;
+        document.getElementById('city').value = formData[0].city;
+        document.getElementById('region').value = formData[0].region;
+        document.getElementById('postalCode').value = formData[0].postalCode;
+        document.getElementById('fatherName').value = formData[0].fatherName;
+        document.getElementById('fatherNumber').value = formData[0].fatherNumber;
+        document.getElementById('fatherOccupation').value = formData[0].fatherOccupation;
+        document.getElementById('motherName').value = formData[0].motherName;
+        document.getElementById('motherOccupation').value = formData[0].motherOccupation;
+        document.getElementById('highSchool').value = formData[0].highSchool;
+        document.getElementById('intermediateExam').value = formData[0].intermediateExam;
+
+    </script> 
+</body>
+
+</html>

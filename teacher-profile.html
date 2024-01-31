@@ -1,70 +1,344 @@
 <!DOCTYPE html>
 <!-- Coding by CodingLab | www.codinglabweb.com-->
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--<title>Profile Card UI Design</title>-->
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/teacher-profile.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--<title>Profile Card UI Design</title>-->
 
-    <!-- Boxicons CSS -->
-    <link
-      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
-      rel="stylesheet"
-    />
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/teacher-profile.css" />
+
+  <!-- Boxicons CSS -->
+  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+  <style>
+        .container{
+          display: flex;
+          width: 100%;
+          justify-content: space-around;
+          align-items: flex-start;
+          padding: 30px;
+        }
+.profile-details{
+          width: 50%;
+        }
+
+        .profile-card-one{
+          height: 500px;
+          width: 80%;
+          background: #fff;
+          border-radius: 24px;
+          padding: 25px;
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+  .container .form {
+  margin-top: 30px;
+}
+
+.cards{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 1000px;
+  width: 50%;
+}
+.form .input-box {
+  width: 100%;
+  margin-top: 20px;
+}
+.input-box label {
+  color: #333;
+}
+.form :where(.input-box input, .select-box) {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+.input-box input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.form .column {
+  display: flex;
+  column-gap: 15px;
+}
+.form .gender-box {
+  margin-top: 20px;
+}
+.gender-box h3 {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.family-details, .educational-details{
+    margin-top: 15px;
+}
+.form :where(.gender-option, .gender) {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  flex-wrap: wrap;
+}
+.form .gender {
+  column-gap: 5px;
+}
+.gender input {
+  accent-color: rgb(130, 106, 251);
+}
+.form :where(.gender input, .gender label) {
+  cursor: pointer;
+}
+.gender label {
+  color: #707070;
+}
+.address :where(input, .select-box) {
+  margin-top: 15px;
+}
+.select-box select {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #707070;
+  font-size: 1rem;
+}
+.form button {
+  height: 55px;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: #4070f4;
+}
+.form button:hover {
+  background: rgb(88, 56, 250);
+}
+.profile-details>h1,h4{
+  text-align: center;
+}
+.teacher-functionalities{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  flex-wrap: wrap;
+  background-color: white;
+}
+
+.teacher-functionalities>button{
+  padding: 10px;
+  border: none;
+  width: 30%;
+  height: 30%;
+  font-size: larger;
+  font-weight: 600;
+  color: white;
+  background-color: #4070f4;
+  border-radius: 15px;
+  border: 1px solid;
+  box-shadow: 5px 10px #888888;
+  cursor: pointer;
+}
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="cards">
+      <div class="profile-card">
+        <div class="image">
+          <img src="images/face8.jpg" alt="" class="profile-img" />
+        </div>
   
-  </head>
-  <body>
-    <div class="profile-card">
-      <div class="image">
-        <img src="images/face8.jpg" alt="" class="profile-img" />
-      </div>
-
-      <div class="text-data">
-        <span class="name">Mudit Bhardwaj</span>
-        <span class="job">Admin</span>
-      </div>
-
-      <div class="">
-        <!-- <a href="#" style="background: #4267b2" class="link">
-          <i class="bx bxl-facebook"></i>
-        </a>
-        <a href="#" style="background: #1da1f2" class="link">
-          <i class="bx bxl-twitter"></i>
-        </a>
-        <a href="#" style="background: #e1306c" class="link">
-          <i class="bx bxl-instagram"></i>
-        </a>
-        <a href="#" style="background: #ff0000" class="link">
-          <i class="bx bxl-youtube"></i>
-        </a> -->
-        <h4>Designation : Front End Trainer</h4>
-        <h4>Mobile No. : 9897653247</h4>
-        <h4>Email : mudit@gmail.com</h4>
-      </div>
-
-      <div class="buttons">
-        <button class="button">Edit Profile</button>
-        <button class="button">Add Student</button>
-      </div>
-
-      <div class="analytics">
-        <div class="data">
-          <i class="bx bx-user"></i>
-          <span class="number">Male</span>
+        <div class="text-data">
+          <span class="name">Mudit Bhardwaj</span>
+          <span class="job">Admin</span>
         </div>
-        <div class="data">
-          <i class="bx bx-book"></i>
-          <span class="number">10Yrs</span>
+  
+        <div class="">
+          <h4>Designation : Front End Trainer</h4>
+          <h4>Mobile No. : 9897653247</h4>
+          <h4>Email : mudit@gmail.com</h4>
         </div>
-        <div class="data">
-          <i class="bx bx-map"></i>
-          <span class="number">Noida</span>
+  
+        <div class="buttons">
+          <button class="button">Edit Profile</button>
+          <button class="button">Add Student</button>
         </div>
+  
+        <div class="analytics">
+          <div class="data">
+            <i class="bx bx-user"></i>
+            <span class="number">Male</span>
+          </div>
+          <div class="data">
+            <i class="bx bx-book"></i>
+            <span class="number">10Yrs</span>
+          </div>
+          <div class="data">
+            <i class="bx bx-map"></i>
+            <span class="number">Noida</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="profile-card-one">
+        <div class="teacher-functionalities">
+          <button>Mark Attendence</button>
+          <button>Upload Result</button>
+          <button>Go to Library</button>
+          <button>Mark Attendence</button>
+          <button>Upload Result</button>
+          <button>Go to Library</button>
+        </div>
+        
       </div>
     </div>
-  </body>
+
+    <div class="profile-details">
+      <br />
+
+      <h1>Teacher Details</h1>
+      <h4>Teacher Name</h4>
+      <form action="#" class="form">
+          <div class="personal-details">
+              <h3>Personal Details</h3>
+              <div class="input-box">
+                  <label>Full Name</label>
+                  <input type="text" placeholder="Enter full name" class="fullName"  />
+              </div>
+
+              <div class="input-box">
+                  <label>Email Address</label>
+                  <input type="text" placeholder="Enter email address" class="email"  />
+              </div>
+
+              <div class="column">
+                  <div class="input-box">
+                      <label>Phone Number</label>
+                      <input type="number" placeholder="Enter phone number" class="mobileNo"  />
+                  </div>
+                  <div class="input-box">
+                      <label>Birth Date</label>
+                      <input type="date" placeholder="Enter birth date" class="dob"  />
+                  </div>
+              </div>
+
+              <div class="gender-box">
+                  <h3>Gender</h3>
+                  <div class="gender-option">
+                      <div class="">
+                          <input type="radio" id="check-male" name="gender" value="Male" checked />
+                          <label for="check-male">male</label>
+                      </div>
+                      <div class="">
+                          <input type="radio" id="check-female" name="gender" value="Female"  />
+                          <label for="check-female">Female</label>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="input-box address">
+                  <label>Address</label>
+                  <input type="text" placeholder="Enter street address" class="street1"  />
+                  <input type="text" placeholder="Enter street address line 2" class="street2"  />
+                  <div class="column">
+                      <div class="select-box">
+                          <select class="country">
+                              <option hidden>Country</option>
+                              <option>America</option>
+                              <option>Japan</option>
+                              <option>India</option>
+                              <option>Nepal</option>
+                          </select>
+                      </div>
+                      <input type="text" placeholder="Enter your city" class="city"  />
+                  </div>
+                  <div class="column">
+                      <input type="text" placeholder="Enter your region" class="region"  />
+                      <input type="number" placeholder="Enter postal code" class="postalCode"  />
+                  </div>
+              </div>
+          </div>
+
+          <!-- <div class="family-details">
+              <h3>Family Details</h3>
+              <div class="column">
+                  <div class="input-box">
+                      <label>Father's Name</label>
+                      <input type="text" placeholder="Enter your father's name" class="fatherName" />
+                  </div>
+                  <div class="input-box">
+                      <label>Father's Number</label>
+                      <input type="number" placeholder="Enter your father's number" class="fatherNumber"  />
+                  </div>
+              </div>
+
+              <div class="input-box">
+                  <label>Father's Occupation</label>
+                  <input type="text" placeholder="Enter father's occupation" class="fatherOccupation" />
+              </div>
+
+              <div class="column">
+                  <div class="input-box">
+                      <label>Mother's Name</label>
+                      <input type="text" placeholder="Enter your mother's name" class="motherName" />
+                  </div>
+                  <div class="input-box">
+                      <label>Mother's Occupation</label>
+                      <input type="text" placeholder="Enter your mother's occupation" class="motherOccupation"  />
+                  </div>
+              </div>
+          </div> -->
+
+          <div class="educational-details">
+              <h3>Educational Details</h3>
+              <div class="column">
+                  <div class="input-box">
+                      <label>High School %</label>
+                      <input type="text" placeholder="Enter high school percentage" class="highSchool"  />
+                  </div>
+
+                  <div class="input-box">
+                      <label>High School Marksheet</label>
+                      <input type="file" placeholder="Enter high school marksheet" class="highSchoolCertificate"  />
+                  </div>
+              </div>
+
+              <div class="column">
+                  <div class="input-box">
+                      <label>Intermediate Exam %</label>
+                      <input type="text" placeholder="Enter intermediate exam percentage" class="intermediateExam"  />
+                  </div>
+
+                  <div class="input-box">
+                      <label>Intermediate Exam Marksheet</label>
+                      <input type="file" placeholder="Enter intermediate exam marksheet" class="intermediateExamCertificate" />
+                  </div>
+              </div>
+          </div>
+
+          <button>Submit</button>
+      </form>
+    </div>
+  </div>
+
+
+</body>
+
 </html>

@@ -19,34 +19,34 @@
                 <h3>Personal Details</h3>
                 <div class="input-box">
                     <label>Full Name</label>
-                    <input type="text" placeholder="Enter full name" required />
+                    <input type="text" placeholder="Enter full name" class="fullName"  />
                 </div>
 
                 <div class="input-box">
                     <label>Email Address</label>
-                    <input type="text" placeholder="Enter email address" required />
+                    <input type="text" placeholder="Enter email address" class="email"  />
                 </div>
 
                 <div class="column">
                     <div class="input-box">
                         <label>Phone Number</label>
-                        <input type="number" placeholder="Enter phone number" required />
+                        <input type="number" placeholder="Enter phone number" class="mobileNo"  />
                     </div>
                     <div class="input-box">
                         <label>Birth Date</label>
-                        <input type="date" placeholder="Enter birth date" required />
+                        <input type="date" placeholder="Enter birth date" class="dob"  />
                     </div>
                 </div>
 
                 <div class="gender-box">
                     <h3>Gender</h3>
                     <div class="gender-option">
-                        <div class="gender">
-                            <input type="radio" id="check-male" name="gender" checked />
+                        <div class="">
+                            <input type="radio" id="check-male" name="gender" value="Male" checked />
                             <label for="check-male">male</label>
                         </div>
-                        <div class="gender">
-                            <input type="radio" id="check-female" name="gender" />
+                        <div class="">
+                            <input type="radio" id="check-female" name="gender" value="Female"  />
                             <label for="check-female">Female</label>
                         </div>
                     </div>
@@ -54,11 +54,11 @@
 
                 <div class="input-box address">
                     <label>Address</label>
-                    <input type="text" placeholder="Enter street address" required />
-                    <input type="text" placeholder="Enter street address line 2" required />
+                    <input type="text" placeholder="Enter street address" class="street1"  />
+                    <input type="text" placeholder="Enter street address line 2" class="street2"  />
                     <div class="column">
                         <div class="select-box">
-                            <select>
+                            <select class="country">
                                 <option hidden>Country</option>
                                 <option>America</option>
                                 <option>Japan</option>
@@ -66,11 +66,11 @@
                                 <option>Nepal</option>
                             </select>
                         </div>
-                        <input type="text" placeholder="Enter your city" required />
+                        <input type="text" placeholder="Enter your city" class="city"  />
                     </div>
                     <div class="column">
-                        <input type="text" placeholder="Enter your region" required />
-                        <input type="number" placeholder="Enter postal code" required />
+                        <input type="text" placeholder="Enter your region" class="region"  />
+                        <input type="number" placeholder="Enter postal code" class="postalCode"  />
                     </div>
                 </div>
             </div>
@@ -80,27 +80,27 @@
                 <div class="column">
                     <div class="input-box">
                         <label>Father's Name</label>
-                        <input type="text" placeholder="Enter your father's name" required />
+                        <input type="text" placeholder="Enter your father's name" class="fatherName" />
                     </div>
                     <div class="input-box">
                         <label>Father's Number</label>
-                        <input type="number" placeholder="Enter your father's number" required />
+                        <input type="number" placeholder="Enter your father's number" class="fatherNumber"  />
                     </div>
                 </div>
 
                 <div class="input-box">
                     <label>Father's Occupation</label>
-                    <input type="text" placeholder="Enter father's occupation" required />
+                    <input type="text" placeholder="Enter father's occupation" class="fatherOccupation" />
                 </div>
 
                 <div class="column">
                     <div class="input-box">
                         <label>Mother's Name</label>
-                        <input type="text" placeholder="Enter your mother's name" required />
+                        <input type="text" placeholder="Enter your mother's name" class="motherName" />
                     </div>
                     <div class="input-box">
                         <label>Mother's Occupation</label>
-                        <input type="text" placeholder="Enter your mother's occupation" required />
+                        <input type="text" placeholder="Enter your mother's occupation" class="motherOccupation"  />
                     </div>
                 </div>
             </div>
@@ -110,24 +110,24 @@
                 <div class="column">
                     <div class="input-box">
                         <label>High School %</label>
-                        <input type="text" placeholder="Enter high school percentage" required />
+                        <input type="text" placeholder="Enter high school percentage" class="highSchool"  />
                     </div>
 
                     <div class="input-box">
                         <label>High School Marksheet</label>
-                        <input type="file" placeholder="Enter high school marksheet" required />
+                        <input type="file" placeholder="Enter high school marksheet" class="highSchoolCertificate"  />
                     </div>
                 </div>
 
                 <div class="column">
                     <div class="input-box">
                         <label>Intermediate Exam %</label>
-                        <input type="text" placeholder="Enter intermediate exam percentage" required />
+                        <input type="text" placeholder="Enter intermediate exam percentage" class="intermediateExam"  />
                     </div>
 
                     <div class="input-box">
                         <label>Intermediate Exam Marksheet</label>
-                        <input type="file" placeholder="Enter intermediate exam marksheet" required />
+                        <input type="file" placeholder="Enter intermediate exam marksheet" class="intermediateExamCertificate" />
                     </div>
                 </div>
             </div>
@@ -135,6 +135,70 @@
             <button>Submit</button>
         </form>
     </section>
+
+    <script>
+     document.querySelector('.form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const fullName = document.querySelector('.fullName').value;
+    const email = document.querySelector('.email').value;
+    const mobileNo = document.querySelector('.mobileNo').value;
+    const dob = document.querySelector('.dob').value;
+    const gender = document.querySelector('input[type=radio][name=gender]:checked').value;
+    const street1 = document.querySelector('.street1').value;
+    const street2 = document.querySelector('.street2').value;
+    const country = document.querySelector('.country').value;
+    const city = document.querySelector('.city').value;
+    const region = document.querySelector('.region').value;
+    const postalCode = document.querySelector('.postalCode').value;
+    const fatherName = document.querySelector('.fatherName').value;
+    const fatherNumber = document.querySelector('.fatherNumber').value;
+    const fatherOccupation = document.querySelector('.fatherOccupation').value;
+    const motherName = document.querySelector('.motherName').value;
+    const motherOccupation = document.querySelector('.motherOccupation').value;
+    const highSchool = document.querySelector('.highSchool').value;
+    const highSchoolCertificate = document.querySelector('.highSchoolCertificate').value;
+    const intermediateExam = document.querySelector('.intermediateExam').value;
+    const intermediateExamCertificate = document.querySelector('.intermediateExamCertificate').value;
+
+    const formData = {
+        fullName: fullName,
+        email: email,
+        mobileNo: mobileNo,
+        dob : dob,
+        gender : gender,
+        street1 : street1,
+        street2 : street2,
+        country : country,
+        city : city,
+        region : region,
+        postalCode : postalCode,
+        fatherName : fatherName,
+        fatherNumber :fatherNumber,
+        fatherOccupation :fatherOccupation,
+        motherName :motherName,
+        motherOccupation : motherOccupation,
+        highSchool :highSchool,
+        highSchoolCertificate :highSchoolCertificate,
+        intermediateExam :intermediateExam,
+        intermediateExamCertificate :intermediateExamCertificate
+    };
+    console.log(formData);
+
+    saveFormData(formData);
+});
+
+function saveFormData(formData) {
+    const storedFormData = JSON.parse(localStorage.getItem('formData')) || [];
+
+    storedFormData.push(formData);
+
+    localStorage.setItem('formData', JSON.stringify(storedFormData));
+    console.log(storedFormData);
+
+}
+
+    </script>
 </body>
 
 </html>
